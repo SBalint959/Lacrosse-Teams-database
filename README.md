@@ -9,7 +9,7 @@ Autor: Sven Balint
 
 Verzija 1.0
 
-Jezik: engleski(english)
+Jezik: engleski (english)
 
 Atributi: Glavna tablica: koji je igrač bio plasiran, njegovo ime i prezime, ime time, država i grad iz kojeg je tim, u kojem dijelu lige igra, godina osnovanja kluba, trener, plasman tima prošle sezone, rezultat prošle sezone (pobjede-porazi), dosadašnji najbolji plasman, broj titula 
           Tablica igrača: Id igrača - plasman igrača, ime i prezime, bodovi, bodovi po igri
