@@ -1,122 +1,201 @@
-[{
-   "Ime tima": "Buffalo Bandits",
-   "Država": "USA",
-   "Grad": "Buffalo",
-   "Odjel lige": "East",
-   "Godina osnuća": "1991",
-   "Trener": "John Tavares",
-   "Plasman zadnje sezone": "2nd",
-   "Omjer pobijeda i poraza zadnje sezone": "14-4",
-   "Broj titula": 4,
-   "Igrač": ["Smith Dhane", "Evans Shawn"]
-}, {
-   "Ime tima": "Calgary Roughnecks",
-   "Država": "Canada",
-   "Grad": "Calgary",
-   "Odjel lige": "West",
-   "Godina osnuća": "2002",
-   "Trener": "Curt Malawsky",
-   "Plasman zadnje sezone": "1st",
-   "Omjer pobijeda i poraza zadnje sezone": "12-6",
-   "Broj titula": 3,
-   "Igrač": ["Dobbie Dane"]
-}, {
-   "Ime tima": "New England Black Wolves",
-   "Država": "USA",
-   "Grad": "Connecticut",
-   "Odjel lige": "East",
-   "Godina osnuća": "2015",
-   "Trener": "Glenn Clark",
-   "Plasman zadnje sezone": "5th",
-   "Omjer pobijeda i poraza zadnje sezone": "9-9",
-   "Broj titula": 0,
-   "Igrač": ["Leblanc Stephan", "CrawFord Callum"]
-}, {
-   "Ime tima": "San Diego Seals",
-   "Država": "USA",
-   "Grad": "San Diego",
-   "Odjel lige": "West",
-   "Godina osnuća": "2017",
-   "Trener": "Patrick Merrill",
-   "Plasman zadnje sezone": "8th",
-   "Omjer pobijeda i poraza zadnje sezone": "10-8",
-   "Broj titula": 0,
-   "Igrač": ["Billings Garrett", "Dawson Dan"]
-}, {
-   "Ime tima": "Toronto Rock",
-   "Država": "Canada",
-   "Grad": "Hamilton",
-   "Odjel lige": "East",
-   "Godina osnuća": "1998",
-   "Trener": "Matt Sawyer",
-   "Plasman zadnje sezone": "4th",
-   "Omjer pobijeda i poraza zadnje sezone": "12-6",
-   "Broj titula": 6,
-   "Igrač": ["Schreiber Tom"]
-}, {
-   "Ime tima": "Saskatchewan Rush",
-   "Država": "Canada",
-   "Grad": "Saskatoon",
-   "Odjel lige": "West",
-   "Godina osnuća": "2015",
-   "Trener": "Derek Keenan",
-   "Plasman zadnje sezone": "7th",
-   "Omjer pobijeda i poraza zadnje sezone": "11-7",
-   "Broj titula": 2,
-   "Igrač": ["Matthews Mark"]
-}, {
-   "Ime tima": "Georgia Swarm",
-   "Država": "USA",
-   "Grad": "Duluth",
-   "Odjel lige": "East",
-   "Godina osnuća": "2004",
-   "Trener": "Ed Comeau",
-   "Plasman zadnje sezone": "6th",
-   "Omjer pobijeda i poraza zadnje sezone": "12-6",
-   "Broj titula": 1,
-   "Igrač": ["Thompson Lyle"]
-}, {
-   "Ime tima": "Rochester Knighthawks",
-   "Država": "USA",
-   "Grad": "Rochester",
-   "Odjel lige": "East",
-   "Godina osnuća": "2019",
-   "Trener": "Mike Hasen",
-   "Plasman zadnje sezone": "10th",
-   "Omjer pobijeda i poraza zadnje sezone": "6-12",
-   "Broj titula": 0,
-   "Igrač": ["Jamieson Cody"]
-}, {
-   "Ime tima": "Philadelphia Wings",
-   "Država": "USA",
-   "Grad": "Philadelphia",
-   "Odjel lige": "East",
-   "Godina osnuća": "2019",
-   "Trener": "Paul Day",
-   "Plasman zadnje sezone": "9th",
-   "Omjer pobijeda i poraza zadnje sezone": "4-14",
-   "Broj titula": 0,
-   "Igrač": ["Matisz Kiel"]
-}, {
-   "Ime tima": "Vancouver Warriors",
-   "Država": "Canada",
-   "Grad": "Vancouver",
-   "Odjel lige": "West",
-   "Godina osnuća": "2014",
-   "Trener": "Chris Gill",
-   "Plasman zadnje sezone": "11th",
-   "Omjer pobijeda i poraza zadnje sezone": "5-13",
-   "Broj titula": 0,
-   "Igrač": ["Jones Mitch"]
-}, {
-   "Ime tima": "Colorado Mammoth",
-   "Država": "USA",
-   "Grad": "Denver",
-   "Odjel lige": "West",
-   "Godina osnuća": "2003",
-   "Trener": "Chris Gill",
-   "Plasman zadnje sezone": "3rd",
-   "Omjer pobijeda i poraza zadnje sezone": "6-12",
-   "Broj titula": 1,
-   "Igrač": ["McLaughlin Eli"]
-}]
+[
+   {
+      "Ime tima":"Buffalo Bandits",
+      "Država":"USA",
+      "Grad":"Buffalo",
+      "Odjel lige":"East",
+      "Godina osnuća":"1991",
+      "Trener":"John Tavares",
+      "Plasman zadnje sezone":"2nd",
+      "Omjer pobijeda i poraza zadnje sezone":"14-4",
+      "Broj titula":4,
+      "Igrač":[
+         {
+            "Ime":"Dhane",
+            "Prezime":"Smith"
+         },
+         {
+            "Ime":"Shawn",
+            "Prezime":"Evans"
+         }
+      ]
+   },
+   {
+      "Ime tima":"Calgary Roughnecks",
+      "Država":"Canada",
+      "Grad":"Calgary",
+      "Odjel lige":"West",
+      "Godina osnuća":"2002",
+      "Trener":"Curt Malawsky",
+      "Plasman zadnje sezone":"1st",
+      "Omjer pobijeda i poraza zadnje sezone":"12-6",
+      "Broj titula":3,
+      "Igrač":[
+         {
+            "Ime":"Dane",
+            "Prezime":"Dobbie"
+         }
+      ]
+   },
+   {
+      "Ime tima":"New England Black Wolves",
+      "Država":"USA",
+      "Grad":"Connecticut",
+      "Odjel lige":"East",
+      "Godina osnuća":"2015",
+      "Trener":"Glenn Clark",
+      "Plasman zadnje sezone":"5th",
+      "Omjer pobijeda i poraza zadnje sezone":"9-9",
+      "Broj titula":0,
+      "Igrač":[
+         {
+            "Ime":"Stephan",
+            "Prezime":"Leblanc"
+         },
+         {
+            "Ime":"Callum",
+            "Prezime":"CrawFord"
+         }
+      ]
+   },
+   {
+      "Ime tima":"San Diego Seals",
+      "Država":"USA",
+      "Grad":"San Diego",
+      "Odjel lige":"West",
+      "Godina osnuća":"2017",
+      "Trener":"Patrick Merrill",
+      "Plasman zadnje sezone":"8th",
+      "Omjer pobijeda i poraza zadnje sezone":"10-8",
+      "Broj titula":0,
+      "Igrač":[
+         {
+            "Ime":"Garrett",
+            "Prezime":"Billings"
+         },
+         {
+            "Ime":"Dan",
+            "Prezime":"Dawson"
+         }
+      ]
+   },
+   {
+      "Ime tima":"Toronto Rock",
+      "Država":"Canada",
+      "Grad":"Hamilton",
+      "Odjel lige":"East",
+      "Godina osnuća":"1998",
+      "Trener":"Matt Sawyer",
+      "Plasman zadnje sezone":"4th",
+      "Omjer pobijeda i poraza zadnje sezone":"12-6",
+      "Broj titula":6,
+      "Igrač":[
+         {
+            "Ime":"Tom",
+            "Prezime":"Schreiber"
+         }
+      ]
+   },
+   {
+      "Ime tima":"Saskatchewan Rush",
+      "Država":"Canada",
+      "Grad":"Saskatoon",
+      "Odjel lige":"West",
+      "Godina osnuća":"2015",
+      "Trener":"Derek Keenan",
+      "Plasman zadnje sezone":"7th",
+      "Omjer pobijeda i poraza zadnje sezone":"11-7",
+      "Broj titula":2,
+      "Igrač":[
+         {
+            "Ime":"Mark",
+            "Prezime":"Matthews"
+         }
+      ]
+   },
+   {
+      "Ime tima":"Georgia Swarm",
+      "Država":"USA",
+      "Grad":"Duluth",
+      "Odjel lige":"East",
+      "Godina osnuća":"2004",
+      "Trener":"Ed Comeau",
+      "Plasman zadnje sezone":"6th",
+      "Omjer pobijeda i poraza zadnje sezone":"12-6",
+      "Broj titula":1,
+      "Igrač":[
+         {
+            "Ime":"Lyle",
+            "Prezime":"Thompson"
+         }
+      ]
+   },
+   {
+      "Ime tima":"Rochester Knighthawks",
+      "Država":"USA",
+      "Grad":"Rochester",
+      "Odjel lige":"East",
+      "Godina osnuća":"2019",
+      "Trener":"Mike Hasen",
+      "Plasman zadnje sezone":"10th",
+      "Omjer pobijeda i poraza zadnje sezone":"6-12",
+      "Broj titula":0,
+      "Igrač":[
+         {
+            "Ime":"Cody",
+            "Prezime":"Jamieson"
+         }
+      ]
+   },
+   {
+      "Ime tima":"Philadelphia Wings",
+      "Država":"USA",
+      "Grad":"Philadelphia",
+      "Odjel lige":"East",
+      "Godina osnuća":"2019",
+      "Trener":"Paul Day",
+      "Plasman zadnje sezone":"9th",
+      "Omjer pobijeda i poraza zadnje sezone":"4-14",
+      "Broj titula":0,
+      "Igrač":[
+         {
+            "Ime":"Kiel",
+            "Prezime":"Matisz"
+         }
+      ]
+   },
+   {
+      "Ime tima":"Vancouver Warriors",
+      "Država":"Canada",
+      "Grad":"Vancouver",
+      "Odjel lige":"West",
+      "Godina osnuća":"2014",
+      "Trener":"Chris Gill",
+      "Plasman zadnje sezone":"11th",
+      "Omjer pobijeda i poraza zadnje sezone":"5-13",
+      "Broj titula":0,
+      "Igrač":[
+         {
+            "Ime":"Mitch",
+            "Prezime":"Jones"
+         }
+      ]
+   },
+   {
+      "Ime tima":"Colorado Mammoth",
+      "Država":"USA",
+      "Grad":"Denver",
+      "Odjel lige":"West",
+      "Godina osnuća":"2003",
+      "Trener":"Chris Gill",
+      "Plasman zadnje sezone":"3rd",
+      "Omjer pobijeda i poraza zadnje sezone":"6-12",
+      "Broj titula":1,
+      "Igrač":[
+         {
+            "Ime":"Eli",
+            "Prezime":"McLaughlin"
+         }
+      ]
+   }
+]
