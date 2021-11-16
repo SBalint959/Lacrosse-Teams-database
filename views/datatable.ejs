@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NLL Teams!</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/lacrosse-icon.png" />
+    <meta name="description" content="List of the teams of top league players" />
+    <meta name="author" content="Sven Balint" />
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body class="centered">
+
+    <div class="header">
+        <img class="scaled-image scaled-image-fixed" src="images/lacrosse-icon.png" alt="lacrosse logo">
+        <h1>Database</h1>
+        <form method="get" action="/" class="main-button">
+            <button type="submit" class="button">Home</button>
+        </form>
+    </div>
+
+    </div>
+    <br>
+    <label for="filter">Odaberite polja za pretragu:</label>
+    <select name="filter" id="filter" onchange="filterFunckija()">
+        <option value="sve">Sva polja</option>
+        <option value="imeTim">Ime tima</option>
+        <option value="prezime">Prezime igrača</option>
+    </select>
+    <input type="text" class="searchbar" id="sve" onkeyup="pretragaSvega()" placeholder="Pretraga po svim poljima...">
+    <br>
+    
+    <br>
+    <table class="tablica centered" style="text-align: center;" id="myTable">
+        <thead>
+            <tr>
+                <th>Player Placed</th>
+                <th>Team Id</th>
+                <th>Team Name</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>East or West</th>
+                <th>Year Founded</th>
+                <th>Coach</th>
+                <th>Placed Last Season</th>
+                <th>W/L Last Season</th>
+                <th>Previously Best Placed</th>
+                <th>Number of Titles</th>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>Season Points</th>
+                <th>Points per Game</th>
+            </tr>
+        </thead>
+        <tbody>
+         <% for (let red of podaci) { %>
+             <tr>
+                 <td><%= red.playerplaced %></td>
+                 <td><%= red.teamid %></td>
+                 <td><%= red.teamname %></td>
+                 <td><%= red.country %></td>
+                 <td><%= red.city %></td>
+                 <td><%= red.eastorwest %></td>
+                 <td><%= red.yearfounded %></td>
+                 <td><%= red.coach %></td>
+                 <td><%= red.placedlastseason %></td>
+                 <td><%= red.winloserecordlastseason %></td>
+                 <td><%= red.previouslybestplaced %></td>
+                 <td><%= red.numberoftitles %></td>
+                 <td><%= red.firstname %></td>
+                 <td><%= red.lastname %></td>
+                 <td><%= red.seasonpoints %></td>
+                 <td><%= red.pointpergame %></td>
+             </tr>
+         <% } %>
+        </tbody>
+    </table>
+    </br>
+    <button id="csv-button" class="button">Preuzimanje CSV</button>
+
+    <div class="footer-table">
+        <p style="font-family: Arial, Helvetica, sans-serif;">Creative Commons BY-SA</p>
+        <p style="font-family: Arial, Helvetica, sans-serif; font-size: smaller;">National Lacrosse League</p>
+    </div>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
