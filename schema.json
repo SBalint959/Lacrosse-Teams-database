@@ -1,0 +1,256 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": [],
+    "examples": [
+        [
+            {
+                "Ime tima": "Buffalo Bandits",
+                "Država": "USA",
+                "Grad": "Buffalo",
+                "Odjel lige": "East",
+                "Godina osnuća": "1991",
+                "Trener": "John Tavares",
+                "Plasman zadnje sezone": "2nd",
+                "Omjer pobijeda i poraza zadnje sezone": "14-4",
+                "Broj titula": 4,
+                "Igrač": [
+                    {
+                        "Ime": "Dhane",
+                        "Prezime": "Smith"
+                    },
+                    {
+                        "Ime": "Shawn",
+                        "Prezime": "Evans"
+                    }
+                ]
+            },
+            {
+                "Ime tima": "Calgary Roughnecks",
+                "Država": "Canada",
+                "Grad": "Calgary",
+                "Odjel lige": "West",
+                "Godina osnuća": "2002",
+                "Trener": "Curt Malawsky",
+                "Plasman zadnje sezone": "1st",
+                "Omjer pobijeda i poraza zadnje sezone": "12-6",
+                "Broj titula": 3,
+                "Igrač": [
+                    {
+                        "Ime": "Dane",
+                        "Prezime": "Dobbie"
+                    }
+                ]
+            }
+        ]
+    ],
+    "additionalItems": true,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "Ime tima": "Buffalo Bandits",
+                        "Država": "USA",
+                        "Grad": "Buffalo",
+                        "Odjel lige": "East",
+                        "Godina osnuća": "1991",
+                        "Trener": "John Tavares",
+                        "Plasman zadnje sezone": "2nd",
+                        "Omjer pobijeda i poraza zadnje sezone": "14-4",
+                        "Broj titula": 4,
+                        "Igrač": [
+                            {
+                                "Ime": "Dhane",
+                                "Prezime": "Smith"
+                            },
+                            {
+                                "Ime": "Shawn",
+                                "Prezime": "Evans"
+                            }
+                        ]
+                    }
+                ],
+                "required": [
+                    "Ime tima",
+                    "Država",
+                    "Grad",
+                    "Odjel lige",
+                    "Godina osnuća",
+                    "Trener",
+                    "Plasman zadnje sezone",
+                    "Omjer pobijeda i poraza zadnje sezone",
+                    "Broj titula",
+                    "Igrač"
+                ],
+                "properties": {
+                    "Ime tima": {
+                        "$id": "#/items/anyOf/0/properties/Ime%20tima",
+                        "type": "string",
+                        "title": "The Ime tima schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Buffalo Bandits"
+                        ]
+                    },
+                    "Država": {
+                        "$id": "#/items/anyOf/0/properties/Dr%C5%BEava",
+                        "type": "string",
+                        "title": "The Država schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "USA"
+                        ]
+                    },
+                    "Grad": {
+                        "$id": "#/items/anyOf/0/properties/Grad",
+                        "type": "string",
+                        "title": "The Grad schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Buffalo"
+                        ]
+                    },
+                    "Odjel lige": {
+                        "$id": "#/items/anyOf/0/properties/Odjel%20lige",
+                        "type": "string",
+                        "title": "The Odjel lige schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "East"
+                        ]
+                    },
+                    "Godina osnuća": {
+                        "$id": "#/items/anyOf/0/properties/Godina%20osnu%C4%87a",
+                        "type": "string",
+                        "title": "The Godina osnuća schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "1991"
+                        ]
+                    },
+                    "Trener": {
+                        "$id": "#/items/anyOf/0/properties/Trener",
+                        "type": "string",
+                        "title": "The Trener schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "John Tavares"
+                        ]
+                    },
+                    "Plasman zadnje sezone": {
+                        "$id": "#/items/anyOf/0/properties/Plasman%20zadnje%20sezone",
+                        "type": "string",
+                        "title": "The Plasman zadnje sezone schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "2nd"
+                        ]
+                    },
+                    "Omjer pobijeda i poraza zadnje sezone": {
+                        "$id": "#/items/anyOf/0/properties/Omjer%20pobijeda%20i%20poraza%20zadnje%20sezone",
+                        "type": "string",
+                        "title": "The Omjer pobijeda i poraza zadnje sezone schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "14-4"
+                        ]
+                    },
+                    "Broj titula": {
+                        "$id": "#/items/anyOf/0/properties/Broj%20titula",
+                        "type": "integer",
+                        "title": "The Broj titula schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            4
+                        ]
+                    },
+                    "Igrač": {
+                        "$id": "#/items/anyOf/0/properties/Igra%C4%8D",
+                        "type": "array",
+                        "title": "The Igrač schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "examples": [
+                            [
+                                {
+                                    "Ime": "Dhane",
+                                    "Prezime": "Smith"
+                                },
+                                {
+                                    "Ime": "Shawn",
+                                    "Prezime": "Evans"
+                                }
+                            ]
+                        ],
+                        "additionalItems": true,
+                        "items": {
+                            "$id": "#/items/anyOf/0/properties/Igra%C4%8D/items",
+                            "anyOf": [
+                                {
+                                    "$id": "#/items/anyOf/0/properties/Igra%C4%8D/items/anyOf/0",
+                                    "type": "object",
+                                    "title": "The first anyOf schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": {},
+                                    "examples": [
+                                        {
+                                            "Ime": "Dhane",
+                                            "Prezime": "Smith"
+                                        }
+                                    ],
+                                    "required": [
+                                        "Ime",
+                                        "Prezime"
+                                    ],
+                                    "properties": {
+                                        "Ime": {
+                                            "$id": "#/items/anyOf/0/properties/Igra%C4%8D/items/anyOf/0/properties/Ime",
+                                            "type": "string",
+                                            "title": "The Ime schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": "",
+                                            "examples": [
+                                                "Dhane"
+                                            ]
+                                        },
+                                        "Prezime": {
+                                            "$id": "#/items/anyOf/0/properties/Igra%C4%8D/items/anyOf/0/properties/Prezime",
+                                            "type": "string",
+                                            "title": "The Prezime schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": "",
+                                            "examples": [
+                                                "Smith"
+                                            ]
+                                        }
+                                    },
+                                    "additionalProperties": true
+                                }
+                            ]
+                        }
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}
