@@ -1,0 +1,296 @@
+{
+   "openapi": "3.0.1",
+   "info": {
+      "title": "Lacrosse Teams Database",
+      "description": "This database contains data about top players from NLL",
+      "license": "Creative Commons BY-SA",
+      "version": "3.0"
+   },
+   "servers": [
+      {
+         "url": "http://localhost:3000/api/v1"
+      }
+   ],
+   "paths": {
+      "/departments/": {
+         "get": {
+            "produces": [
+               "application/json"
+            ],              
+            "summary": "Get all top players with their team from database",
+            "description": "Returns all collection resources",
+            "responses": {
+               "200": {
+                  "description": "Fetched department object"
+               },
+               "400": {
+                  "description": "Bad Request"
+               },
+               "404": {
+                  "description": "Resource not found"
+               }
+            }
+         },
+         "post": {
+            "produces": [
+               "application/json"
+            ],
+            "summary": "Create and insert new player with team to database",
+            "description": "Creates new data",
+            "parameters": [
+               {
+                  "name": "playerplaced",
+                  "in": "header",
+                  "description": "Players placement and ID of the insert",
+                  "required": true
+               },
+               {
+                  "name": "teamid",
+                  "in": "header",
+                  "description": "Team ID",
+                  "required": true
+               },
+               {
+                  "name": "teamname",
+                  "in": "header",
+                  "description": "Name of the team",
+                  "required": true
+               },
+               {
+                  "name": "country",
+                  "in": "header",
+                  "description": "Country from which team is",
+                  "required": true
+               },
+               {
+                  "name": "city",
+                  "in": "header",
+                  "description": "City from which team is",
+                  "required": true
+               },
+               {
+                  "name": "eastorwest",
+                  "in": "header",
+                  "description": "WHich part of league team plays in",
+                  "required": true
+               },
+               {
+                  "name": "yearfounded",
+                  "in": "header",
+                  "description": "Year of team's foundation",
+                  "required": true
+               },
+               {
+                  "name": "coach",
+                  "in": "header",
+                  "description": "Coach's name and surname",
+                  "required": true
+               },
+               {
+                  "name": "placedlastseason",
+                  "in": "header",
+                  "description": "Team's placement last season",
+                  "required": true
+               },
+               {
+                  "name": "winloserecordlastseason",
+                  "in": "header",
+                  "description": "Team's number of wins and losses last season",
+                  "required": true
+               },
+               {
+                  "name": "previouslybestplaced",
+                  "in": "header",
+                  "description": "Team's best placement in previous seasons",
+                  "required": true
+               },
+               {
+                  "name": "numberoftitles",
+                  "in": "header",
+                  "description": "Team's number of titles",
+                  "required": true
+               },
+               {
+                  "name": "firstname",
+                  "in": "header",
+                  "description": "Player's first name",
+                  "required": true
+               },
+               {
+                  "name": "lastname",
+                  "in": "header",
+                  "description": "Player's surname",
+                  "required": true
+               },
+               {
+                  "name": "seasonpoints",
+                  "in": "header",
+                  "description": "Sum of all points in season",
+                  "required": true
+               },
+               {
+                  "name": "pointspergame",
+                  "in": "header",
+                  "description": "Average points per game",
+                  "required": true
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Input inserted succesfully"
+               },
+               "501": {
+                  "description": "Internal error"
+               }
+            }
+         }
+      },
+      "/departments/:id": {
+         "get": {
+            "produces": [
+               "application/json"
+            ],
+            "summary": "Get resource from collection by ID (playerPlaced)",
+            "description": "Returns a single collection resource",
+            "responses": {
+               "200": {
+                  "description": "Fetched department object"
+               },
+               "400": {
+                  "description": "Invalid ID"
+               },
+               "404": {
+                  "description": "Resource not found"
+               }
+            }
+         },
+         "put": {
+            "produces": [
+               "application/json"
+            ],
+            "summary": "Update existing info about player and his team",
+            "description": "Change existing data",
+            "parameters": [
+               {
+                 "name": "playerplaced",
+                 "in": "path",
+                 "schema": {
+                   "type": "integer"
+                 },
+                 "required": true
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Data updated succesfully"
+               },
+               "501": {
+                  "description": "Internal error"
+               }
+            }
+         },
+         "delete": {
+            "summary": "Delete info about player and his team from database",
+            "description": "Delete data",
+            "parameters": [
+               {
+                 "name": "playerplaced",
+                 "in": "path",
+                 "schema": {
+                   "type": "integer"
+                 },
+                 "required": true
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Data deleted succesfully"
+               },
+               "501": {
+                  "description": "Internal error"
+               }
+            }
+         }
+      },
+      "/departments/USA": {
+         "get": {
+            "produces": [
+               "application/json"
+            ],              
+            "summary": "Get all top players with their team from USA",
+            "description": "Returns filtered data",
+            "responses": {
+               "200": {
+                  "description": "Fetched department object"
+               },
+               "404": {
+                  "description": "Resource not found"
+               },
+               "501": {
+                  "description": "Internal error"
+               }
+            }
+         }
+      },
+      "/departments/players": {
+         "get": {
+            "produces": [
+               "application/json"
+            ],              
+            "summary": "Only get info about players",
+            "description": "Returns data from only one database",
+            "responses": {
+               "200": {
+                  "description": "Fetched department object"
+               },
+               "404": {
+                  "description": "Resource not found"
+               },
+               "500": {
+                  "description": "Internal error"
+               }
+            }
+         }
+      },
+      "/departments/teams": {
+         "get": {
+            "produces": [
+               "application/json"
+            ],              
+            "summary": "Only get info about teams",
+            "description": "Returns data from only one database",
+            "responses": {
+               "200": {
+                  "description": "Fetched department object"
+               },
+               "404": {
+                  "description": "Resource not found"
+               },
+               "500": {
+                  "description": "Internal error"
+               }
+            }
+         }
+      },
+      "/departments/openApi": {
+         "get": {
+            "produces": [
+               "application/json"
+            ],              
+            "summary": "Get open API specification",
+            "description": "Returns open API specs",
+            "responses": {
+               "200": {
+                  "description": "Fetched department object"
+               },
+               "404": {
+                  "description": "Resource not found"
+               },
+               "500": {
+                  "description": "Internal error"
+               }
+            }
+         }
+      }
+   }
+}
