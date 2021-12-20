@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../db');
-
+const openApiSpec = require('../openapi.json');
 
 
 router.get('/', async function (req, res, next) {
@@ -19,12 +19,14 @@ router.get('/', async function (req, res, next) {
       }
       else {
          res.contentType = "application/json";
-         res.statusCode = 400;
-         return res.json({"status": "Bad Request", "message": "Not Fetched department object", "response": null});
+         res.statusCode = 404;
+         return res.json({"status": "There is no connected data in database", "message": "Not Fetched department object", "response": null});
       }
    }
    catch (err) {
-      return res.status(404).send();
+      res.contentType = "application/json";
+         res.statusCode = 501;
+         return res.json({"status": "Not Found", "message": "Ne postoji niti jedan igrac", "response": null});
    }
 });
 
@@ -51,7 +53,7 @@ router.get('/USA', async function (req, res, next) {
       }
    }
    catch (err) {
-      return res.status(500).send();
+      return res.status(501).send();
    }
 
 });
@@ -74,7 +76,7 @@ router.get('/players', async function (req, res, next) {
       else {
          res.contentType = "application/json";
          res.statusCode = 404;
-         return res.json({"status": "Not Found", "message": "Ne postoji niti jedan igrac iz SAD-a", "response": null});
+         return res.json({"status": "Not Found", "message": "Ne postoji niti jedan igrac", "response": null});
       }
    }
    catch (err) {
@@ -94,20 +96,35 @@ router.get('/teams', async function (req, res, next) {
       const resultPodaci = (await db.query(sqlPodaci, [])).rows;
       const rawPodaci = JSON.stringify(resultPodaci)
       const response = JSON.parse(rawPodaci);
-      console.log("BOK");
 
       if (response.length > 0) {
          res.contentType = "application/json";
          res.statusCode = 200;
          res.statusMessage = "OK";
 
-         return res.json({"status": "OK", "message": "Fetched department object", response});
+         return res.json({"status": "OK", "message": "Fetched department object", response: null});
       }
       else {
          res.contentType = "application/json";
          res.statusCode = 404;
-         return res.json({"status": "Not Found", "message": "Ne postoji niti jedan igrac iz SAD-a", "response": null});
+         return res.json({"status": "Not Found", "message": "Trenutno ne postoji niti jedan tim", "response": null});
       }
+   }
+   catch (err) {
+      return res.status(501).send();
+   }
+
+});
+
+router.get('/openApi', async function (req, res, next) {
+   console.log(openApiSpec);
+   try {
+
+      res.contentType = "application/json";
+      res.statusCode = 200;
+      res.statusMessage = "OK";
+
+      return res.json({"status": "OK", "message": "Fetched department object", "result": openApiSpec});
    }
    catch (err) {
       return res.status(501).send();
@@ -140,7 +157,9 @@ router.get('/:id',async function (req, res, next) {
       }
    }
    catch (err) {
-      return res.status(404).send();
+      res.contentType = "application/json";
+         res.statusCode = 404;
+         return res.json({"status": "Not Found", "message": "Nevaljan id", "response": null});
    }
 });
 
@@ -166,7 +185,7 @@ router.post('/', async function(req, res, next) {
       res.contentType = "application/json";
       res.statusCode = 200;
       res.statusMessage = "OK";
-      return res.json({"status": "OK", "message": "Fetched department object"});
+      return res.json({"status": "OK", "message": "Input inserted succesfully"});
 
 
    }
