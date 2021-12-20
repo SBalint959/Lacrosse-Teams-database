@@ -14,8 +14,11 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json())
 
 app.use('/', indexRouter);
 app.use('/datatable', datatableRouter);
+app.use('/api/v1/departments', apiRouter);
 
 app.listen(3000);
