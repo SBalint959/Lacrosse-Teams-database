@@ -8,14 +8,53 @@ router.get('/', async function (req, res, next) {
    const sqlPodaci = `SELECT * FROM topplayerteams NATURAL JOIN topplayers ORDER BY playerplaced`;
    try {
       const resultPodaci = (await db.query(sqlPodaci, [])).rows;
-      const rawPodaci = JSON.stringify(resultPodaci)
-      const response = JSON.parse(rawPodaci);
+      var rawPodaci = JSON.stringify(resultPodaci);
+      const response =  JSON.parse(rawPodaci);
+      
 
       if (response.length > 0) {
          res.contentType = "application/json";
          res.statusCode = 200;
          res.statusMessage = "OK";
+
+         
          return res.json({"status": "OK", "message": "Fetched department objects", response});
+         /*
+         let contextObj = {
+            "@vocab": "http://schema.org",
+            "gamename":"game",
+            "platforms":"gamePlatform",
+            "releasedate":"datePublished"
+         }
+         let newObj = {
+            "@context":contextObj
+         };
+         for(const [key, value] of Object.entries(dbquery_1.rows[0])){
+            newObj[key] = value;
+         }
+         dbquery_1.rows[0]["@context"] = contextObj;
+         res.json({
+            "status": "OK",
+            "message": "Successfuly fetched data.",
+            "result": newObj
+         });
+
+         if (resultPodaci) {
+            let contextObjekt = {
+                "@vocab": "https://schema.org/car",
+                "broj_brzina":"numberOfForwardGears",
+                "tezina_kg":"weight",
+                "sirina_mm":"width"
+            }
+            let newObj = {
+                "@context":contextObjekt
+            };
+            for(const [key, value] of Object.entries(resultPodaci[0])){
+                newObj[key] = value;
+            }
+            resultPodaci[0]["@context"] = contextObjekt;
+        }
+         */
       }
       else {
          res.contentType = "application/json";
@@ -84,6 +123,9 @@ router.get('/players', async function (req, res, next) {
    }
 });
 
+
+
+
 router.get('/teams', async function (req, res, next) {
    const sqlPodaci = `SELECT teamname,teamid, country, city, eastorwest, yearfounded, coach, 
                         placedlastseason, winloserecordlastseason, previouslybestplaced, numberoftitles 
@@ -97,12 +139,13 @@ router.get('/teams', async function (req, res, next) {
       const rawPodaci = JSON.stringify(resultPodaci)
       const response = JSON.parse(rawPodaci);
 
+      
       if (response.length > 0) {
          res.contentType = "application/json";
          res.statusCode = 200;
          res.statusMessage = "OK";
 
-         return res.json({"status": "OK", "message": "Fetched department object", response: null});
+         return res.json({"status": "OK", "message": "Fetched department object", response});
       }
       else {
          res.contentType = "application/json";
@@ -115,6 +158,7 @@ router.get('/teams', async function (req, res, next) {
    }
 
 });
+
 
 router.get('/openApi', async function (req, res, next) {
    console.log(openApiSpec);
@@ -140,6 +184,23 @@ router.get('/:id',async function (req, res, next) {
    try {
       testId = parseInt(id);
       const resultPodaci = (await db.query(sqlPodaci, [])).rows;
+
+      if (resultPodaci) {
+         let contextObject = {
+            "@vocab": "http://schema.org",
+            "teamname": "http://schema.org/SportsTeam",
+            "coach": "http://schema.org/coach",
+            "city": "http://schema.org/city"
+         }
+         let newObject = {
+            "@context":contextObject
+         };
+         for(const [key, value] of Object.entries(resultPodaci[0])){
+            newObject[key] = value;
+        }
+        resultPodaci[0]["@context"] = contextObject;
+      }
+      
       const rawPodaci = JSON.stringify(resultPodaci)
       const response = JSON.parse(rawPodaci);
 
