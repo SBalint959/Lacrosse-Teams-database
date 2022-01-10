@@ -137,3 +137,22 @@ h1 {
     left: 30px;
     padding: 7px;
   }
+
+.profile-display{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.58);
+    max-width: 25%;
+    margin: auto;
+    color: white;
+}
+.login-buttons{
+    margin-right: auto;
+    margin-left: 90%;
+    border: 2px solid #d1d1d1;
+    color: black;
+    font-size: 20px;
+    padding: 15px 32px;
+}
