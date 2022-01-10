@@ -19,7 +19,7 @@ router.use(auth(config));
 
 router.get('/profile', (req, res) => {
    if(req.oidc.user === undefined){
-       res.send("Acces denied. You are not logged in!")
+       res.send("Access denied. You are not logged in!")
    }
    else{
    res.render('profile', {
@@ -31,7 +31,7 @@ router.get('/profile', (req, res) => {
 
 router.get('/update', async function (req, res, next) {
     if(req.oidc.user === undefined){
-        res.send("Acces denied. You are not logged in!")
+        res.send("Access denied. You are not logged in!")
     } else {
         const sqlPodaci =  `SELECT * FROM topplayerteams NATURAL JOIN topplayers`;
         try {
